@@ -64,5 +64,5 @@ fun RowScope.AddItem(
                 popUpTo(navController.graph.findStartDestination().id)
                 launchSingleTop = true
             }
-        })
+        }, alwaysShowLabel = false)
 }
