@@ -1,40 +1,35 @@
 package com.mietgdsc.myinstagram.views.bottomnav
 
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Notifications
-import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.filled.Search
-import androidx.compose.ui.graphics.vector.ImageVector
+import com.mietgdsc.myinstagram.R
 
 sealed class BottomBar(
     val route:String,
     val title:String,
-    val icon:ImageVector
+    val icon:Int
 ){
     object Feed: BottomBar(
         route = "feed",
         title = "Feed",
-        icon = Icons.Default.Home
+        icon = R.drawable.ic_home_filled
     )
     object Search: BottomBar(
         route = "search",
         title = "Search",
-        icon = Icons.Default.Search
+        icon = R.drawable.ic_search
     )
     object Reels: BottomBar(
         route = "reels",
         title = "Reels",
-        icon = Icons.Default.Person
+        icon = R.drawable.ic_reels_outline
     )
     object Notification: BottomBar(
         route = "notification",
-        title = "n",
-        icon = Icons.Default.Notifications
+        title = "Notif..",
+        icon = R.drawable.ic_like_outline
     )
     object Profile: BottomBar(
         route = "profile",
         title = "Profile",
-        icon = Icons.Default.Person
+        icon = R.drawable.ic_baseline_person
     )
 }

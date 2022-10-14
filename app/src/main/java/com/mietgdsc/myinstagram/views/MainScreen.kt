@@ -2,27 +2,25 @@ package com.mietgdsc.myinstagram.views
 
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.*
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Email
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.fontResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.mietgdsc.myinstagram.R
 import androidx.navigation.NavDestination
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.mietgdsc.myinstagram.R
 import com.mietgdsc.myinstagram.views.bottomnav.BottomBar
 import com.mietgdsc.myinstagram.views.bottomnav.BottomNavGraph
 
@@ -46,17 +44,18 @@ fun TopBar(){
         contentColor = Color.Black,
         elevation = 8.dp,
         actions = {
-            IconButton(onClick = {
-//                val i = Intent(context, MessageScreen::class.java)
-//                context.startActivity(i)
-            }) {
-                Icon(painter = painterResource(id = R.drawable.ic_add), contentDescription = "Message Button")
+            IconButton(onClick = {}) {
+                Icon(painter = painterResource(id = R.drawable.ic_add), contentDescription = "Message Button",
+                    tint = Color.Black,
+                    modifier = Modifier.size(25.dp))
             }
             IconButton(onClick = {
 //                val i = Intent(context, MessageScreen::class.java)
 //                context.startActivity(i)
             }) {
-                Icon(painter = painterResource(id = R.drawable.ic_send), contentDescription = "Message Button")
+                Icon(painter = painterResource(id = R.drawable.ic_send), contentDescription = "Message Button",
+                    tint = Color.Black,
+                    modifier = Modifier.size(25.dp))
             }
         }
     )
@@ -94,7 +93,8 @@ fun RowScope.AddItem(
                 Text(text = screen.title)
         },
         icon = {
-               Icon(imageVector = screen.icon, contentDescription = "nav icon")
+               Icon(painter = painterResource(id = screen.icon), contentDescription = "nav icon",
+               modifier = Modifier.size(24.dp))
         },
         selected = currentDestination?.hierarchy?.any {
                 it.route == screen.route
