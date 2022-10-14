@@ -4,8 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.mietgdsc.myinstagram.views.FeedScreen
-import com.mietgdsc.myinstagram.views.SearchScreen
+import com.mietgdsc.myinstagram.views.*
 
 @Composable
 fun BottomNavGraph(navController: NavHostController){
@@ -17,13 +16,13 @@ fun BottomNavGraph(navController: NavHostController){
             SearchScreen()
         }
         composable(route = BottomBar.Reels.route){
-            FeedScreen()
+            ReelScreen()
         }
         composable(route = BottomBar.Notification.route){
-            SearchScreen()
+            NotificationScreen()
         }
         composable(route = BottomBar.Profile.route){
-            FeedScreen()
+            ProfileScreen()
         }
     }
 }

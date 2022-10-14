@@ -154,11 +154,11 @@ fun PostCard(users: Users){
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    MyInstagramTheme {
-        //StoryCard(Users("its_brijesh_rajput", R.drawable.ic_launcher_foreground, "Bunty Rajput", "Meerut", androidx.core.R.drawable.notification_bg, 163, 15, "great")
-        PostCard(Users("its_brijesh_rajput", R.drawable.post4, "Bunty Rajput", "Meerut", R.drawable.post4, 163, 15,"nice pic"))
-    }
-}
+//@Preview(showBackground = true)
+//@Composable
+//fun DefaultPreview() {
+//    MyInstagramTheme {
+//        //StoryCard(Users("its_brijesh_rajput", R.drawable.ic_launcher_foreground, "Bunty Rajput", "Meerut", androidx.core.R.drawable.notification_bg, 163, 15, "great")
+//        PostCard(Users("its_brijesh_rajput", R.drawable.post4, "Bunty Rajput", "Meerut", R.drawable.post4, 163, 15,"nice pic"))
+//    }
+//}
