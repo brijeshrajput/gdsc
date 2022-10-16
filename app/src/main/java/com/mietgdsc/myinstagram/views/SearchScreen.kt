@@ -57,10 +57,10 @@ fun SearchScreen() {
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    MyInstagramTheme {
-        SearchScreen()
-    }
-}
+//@Preview(showBackground = true)
+//@Composable
+//fun DefaultPreview() {
+//    MyInstagramTheme {
+//        SearchScreen()
+//    }
+//}
