@@ -2,6 +2,7 @@ package com.mietgdsc.myinstagram.data
 
 import com.mietgdsc.myinstagram.R
 import com.mietgdsc.myinstagram.model.Notifications
+import com.mietgdsc.myinstagram.model.Reels
 import com.mietgdsc.myinstagram.model.Users
 
 class DataSource {
@@ -26,6 +27,16 @@ class DataSource {
             Notifications(R.drawable.post3,"its.swati","liked your\npost.", R.drawable.post4),
             Notifications(R.drawable.post4,"its_brijesh_rajput","liked your\ncomment.", R.drawable.post3),
             Notifications(R.drawable.post4,"its_brijesh_rajput","liked your\npost.", R.drawable.post5)
+        )
+    }
+
+    fun loadReels() : List<Reels>{
+        return listOf(
+            Reels("gdsc_miet", R.drawable.gdsc_pic, R.drawable.reel1, "Keep Learning!!", "As It Was", "500k", "10k"),
+            Reels("satakshi.jain", R.drawable.post2, R.drawable.reel2, "Wow!!", "Believer", "123", "500"),
+            Reels("dhruv_6514", R.drawable.post6, R.drawable.reel3, "", "", "", ""),
+            Reels("gdsc_miet", R.drawable.gdsc_pic, R.drawable.reel4, "", "", "250k", "10k"),
+            Reels("gdsc_miet", R.drawable.gdsc_pic, R.drawable.reel5, "", "", "100k", "50k"),
         )
     }
 }

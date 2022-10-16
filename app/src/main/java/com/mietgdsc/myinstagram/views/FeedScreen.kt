@@ -138,7 +138,7 @@ fun PostCard(users: Users){
 
         }
         Column(modifier = Modifier.padding(horizontal = 10.dp)) {
-            Text(text = "${users.likes} likes")
+            Text(text = "${users.likes}k likes")
             Text(text = buildAnnotatedString {
                 append(
                     AnnotatedString(
@@ -148,7 +148,7 @@ fun PostCard(users: Users){
                 )
                 append(users.capt)
             })
-            Text(text = "View all ${users.commentcount} comments",
+            Text(text = "View all ${users.commentcount}k comments",
             color = Color.DarkGray, fontSize = 15.sp)
         }
     }
